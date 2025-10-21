@@ -2,7 +2,7 @@
 This library was created to plot well log data by bokeh. The main advantage of bokeh is linked brushing. Linked brushing connects multiple plots in such a way that when points in one plot is highlighted, then corresponding points in the other plots also get highlighted.
 
 The way to apply this library first download the library.
-Convert the well data to pandas dataframe. THe dataframe is considered to be stored in the variable df.
+Convert the well data to pandas dataframe. THe dataframe is considered to be stored in the variable df.\n
 
 from WellLogPlot import WellPlot
 from bokeh.models import ColumnDataSource, BoxSelectTool, LassoSelectTool, CDSView, IndexFilter, BooleanFilter
