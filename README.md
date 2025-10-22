@@ -4,13 +4,13 @@ This library was created to plot well log data by bokeh. The main advantage of b
 The way to apply this library first download the library.
 Convert the well data to pandas dataframe. THe dataframe is considered to be stored in the variable df.
 
-`from WellLogPlot import WellPlot
+`from WellLogPlot import WellPlot`
 
-from bokeh.models import ColumnDataSource, BoxSelectTool, LassoSelectTool, CDSView, IndexFilter, BooleanFilter
+`from bokeh.models import ColumnDataSource, BoxSelectTool, LassoSelectTool, CDSView, IndexFilter, BooleanFilter`
 
-from bokeh.plotting import figure, show, output_file, save
+`from bokeh.plotting import figure, show, output_file, save`
 
-from bokeh.layouts import layout`
+`from bokeh.layouts import layout`
 
 What are the different logs in each plot of the well log plot that need to be defined.
 plot_1={'logs':['GR_COR','SP','BS','CALI'],
