@@ -12,7 +12,9 @@ Convert the well data to pandas dataframe. THe dataframe is considered to be sto
 
 `from bokeh.layouts import layout`
 
+
 What are the different logs in each plot of the well log plot that need to be defined.
+
 
 plot_1={'logs':['GR_COR','SP','BS','CALI'],
         
