@@ -5,11 +5,8 @@ The way to apply this library first download the library.
 Convert the well data to pandas dataframe. THe dataframe is considered to be stored in the variable df.
 ```python
 from WellLogPlot import WellPlot
-
 from bokeh.models import ColumnDataSource, BoxSelectTool, LassoSelectTool, CDSView, IndexFilter, BooleanFilter
-
 from bokeh.plotting import figure, show, output_file, save
-
 from bokeh.layouts import layout
 
 
