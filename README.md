@@ -3,17 +3,17 @@ This library was created to plot well log data by bokeh. The main advantage of b
 
 The way to apply this library first download the library.
 Convert the well data to pandas dataframe. THe dataframe is considered to be stored in the variable df.
+```python
+from WellLogPlot import WellPlot
 
-`from WellLogPlot import WellPlot`
+from bokeh.models import ColumnDataSource, BoxSelectTool, LassoSelectTool, CDSView, IndexFilter, BooleanFilter
 
-`from bokeh.models import ColumnDataSource, BoxSelectTool, LassoSelectTool, CDSView, IndexFilter, BooleanFilter`
+from bokeh.plotting import figure, show, output_file, save
 
-`from bokeh.plotting import figure, show, output_file, save`
-
-`from bokeh.layouts import layout`
+from bokeh.layouts import layout
 
 
-What are the different logs in each plot of the well log plot that need to be defined.
+# What are the different logs in each plot of the well log plot that need to be defined.
 
 
 plot_1={'logs':['GR_COR','SP','BS','CALI'],
@@ -30,7 +30,7 @@ plot_1={'logs':['GR_COR','SP','BS','CALI'],
         
         'fill_colour':None}
         
-plot_2={'logs':['NPHI_COR','RHO_COR'],`
+plot_2={'logs':['NPHI_COR','RHO_COR'],
 
         'x_rang':[[0.54,-0.06],[1.75,2.75]],
         
@@ -44,14 +44,15 @@ plot_2={'logs':['NPHI_COR','RHO_COR'],`
         
         'fill_colour':[['purple','yellow']]}
 
-`tool='lasso_select'`
+tool='lasso_select'
 
-`source=ColumnDataSource(data=well_df)` well_df is the well data in pandas dataframe
+source=ColumnDataSource(data=well_df)  # well_df is the well data in pandas dataframe
 
-`plot=WellPlot(source=source)`
+plot=WellPlot(source=source)
 
-`well_plots=plot.complete_plot(well_cpi=[plot_1,plot_2],tool=tool,y_rang=[df['DEPTH'].max(),df['DEPTH'].min()],heit=1000,n_cols=2)`
+well_plots=plot.complete_plot(well_cpi=[plot_1,plot_2],tool=tool,y_rang=[df['DEPTH'].max(),df['DEPTH'].min()],heit=1000,n_cols=2)
 
-`show(layout([well_cpi_total],sizing_mode='fixed'))`
+show(layout([well_cpi_total],sizing_mode='fixed'))
+```
 
 This will give you the well log plot.
